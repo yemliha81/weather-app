@@ -22,39 +22,39 @@ How to install?
 
 API Endpoints
 
-http://localhost:8085/users/register
-Request : POST (Body, form-data)
-Parameters : 
-email : string 
-password : string 
-city_id : integer (1 to 10, city list is available in mysql cities table )
-language : string
+1. http://localhost:8085/users/register
+- Request : POST (Body, form-data)
+- Parameters : 
+- email : string 
+- password : string 
+- city_id : integer (1 to 10, city list is available in mysql cities table )
+- language : string
  
 
 
-http://localhost:8085/users/login
-Request : POST (Body, form-data)
-Parameters : 
-email : string 
-password : string
+2. http://localhost:8085/users/login
+- Request : POST (Body, form-data)
+- Parameters : 
+- email : string 
+- password : string
  
 
 
-http://localhost:8085/users/update
-Request : POST (Body, form-data)
-Header : authToken (It will be provided after login)
-Parameters : 
-email : string 
-password : string 
-city_id : integer (1 to 10, city list is available in mysql cities table )
-language : string
+3. http://localhost:8085/users/update
+- Request : POST (Body, form-data)
+- Header : authToken (It will be provided after login)
+- Parameters : 
+- email : string 
+- password : string 
+- city_id : integer (1 to 10, city list is available in mysql cities table )
+- language : string
  
 
 
-http://localhost:8085/users/activate
-Request : POST (Body, form-data)
-Header : authToken (It will be provided after login)
-Parameters : 
-id : integer (user id)
-promotionCode : string (Codes are available in mysql promotion_codes table.)
+4. http://localhost:8085/users/activate
+- Request : POST (Body, form-data)
+- Header : authToken (It will be provided after login)
+- Parameters : 
+- id : integer (user id)
+- promotionCode : string (Codes are available in mysql promotion_codes table.)
  
