@@ -1,0 +1,47 @@
+<div class="text-center">
+    <h2>Weather App</h2>
+</div>
+<div class="container">
+    <p>This is a sample weather application. You can use the API endpoints as explained below.</p>
+    <div class="">
+        <h3>API Endpoints</h3>
+        <div class="endpointExp">
+           <p>http://localhost:8085/users/register</p>
+           <p> <b> Request :</b> POST (Body, form-data)</p>
+           <p><b>Parameters :</b> <br>
+               email : string <br>
+               password : string <br>
+               city_id : integer (1 to 10, city list is available in mysql cities table )  <br>
+               language : string
+            </p>
+        </div>
+        <div class="endpointExp">
+           <p>http://localhost:8085/users/login</p>
+           <p> <b> Request :</b> POST (Body, form-data)</p>
+           <p><b>Parameters :</b> <br>
+               email : string <br>
+               password : string
+            </p>
+        </div>
+        <div class="endpointExp">
+           <p>http://localhost:8085/users/update</p>
+           <p> <b> Request :</b> POST (Body, form-data)</p>
+           <p> <b> Header :</b> authToken (It will be provided after login)</p>
+           <p><b>Parameters :</b> <br>
+               email : string <br>
+               password : string <br>
+               city_id : integer (1 to 10, city list is available in mysql cities table )  <br>
+               language : string
+            </p>
+        </div>
+        <div class="endpointExp">
+           <p>http://localhost:8085/users/activate</p>
+           <p> <b> Request :</b> POST (Body, form-data)</p>
+           <p> <b> Header :</b> authToken (It will be provided after login)</p>
+           <p><b>Parameters :</b> <br>
+               id : integer (user id)<br>
+               promotionCode : string (Codes are available in mysql promotion codes table.)
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="row" style="padding:30px;">
+    <div class="col-sm-3">
+        <div class="text-center"> <h3> Registiration Form </h3> </div>
+        <form id="userForm" onsubmit="return false" method="post">
+        <p> <input type="hidden" name="id" value="3"></p>
+            <p> <input type="text" name="email" class="form-control" placeholder="E-mail"></p>
+            <p> <input type="password" name="password" class="form-control" placeholder="Password"></p>
+            <p>
+                <select name="city_id" class="form-control">
+                <?php foreach($cities as $city){ ?>    
+                    <option value="<?php echo $city->is;?>"><?php echo $city->city_name;?></option>
+                <?php } ?>
+                </select>
+            </p>
+            <p>
+                <select name="language" class="form-control">
+                    <option value="English">English</option>
+                    <option value="German">German</option>
+                    <option value="Turkish">Turkish</option>
+                </select>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-sm btn-info save form-control">SAVE</button>
+                    </div>
+                </div>
+            </p>
+        </form>
+
+        <hr>
+
+        <div class="text-center"> <h3> Login Form </h3> </div>
+        <form id="loginForm" onsubmit="return false" method="post">
+            <p> <input type="text" name="email" class="form-control" placeholder="E-mail"></p>
+            <p> <input type="password" name="password" class="form-control" placeholder="Password"></p>
+            
+            <p> <button class="btn btn-sm btn-info login form-control">LOGIN</button></p>
+        </form>
+
+
+    </div>
+    <div class="col-sm-9">
+        <div class="response">
+            <div>Api Response : </div>
+            <div class="responseCode"></div>
+        </div>
+    </div>
+</div>
+

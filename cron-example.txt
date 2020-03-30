@@ -1,0 +1,1 @@
+0 * * * * wget -q http://localhost:8085/users/cron >/dev/null 2>&1 

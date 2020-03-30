@@ -1,0 +1,157 @@
+-- Adminer 4.7.6 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `cities`;
+CREATE TABLE `cities` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `city_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `time_zone` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `weather` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `time_dif` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `cities` (`id`, `city_name`, `time_zone`, `weather`, `time_dif`) VALUES
+(1,	'London',	'Europe/London',	'Sunny 22 C',	1),
+(2,	'Istanbul',	'Europe/Istanbul',	'Rainy 14 C',	3),
+(3,	'California',	'Usa/California',	'Cloudy 18 C',	-7),
+(4,	'Berlin',	'Europe/Berlin',	'Rainy 13 C',	2),
+(5,	'Paris',	'Europe/Paris',	'Cloudy 16 C',	1),
+(6,	'Rome',	'Europe/Rome',	'Sunny 20 C',	2),
+(7,	'Athens',	'Europe/Athens',	'Sunny 24 C',	2),
+(8,	'Madrid',	'Europe/Madrid',	'Cloudy 18 C',	1),
+(9,	'Tokyo',	'Asia/Tokyo',	'Cloudy 16 C',	9),
+(10,	'Bejing',	'Asia/Shanghai',	'Rainy 14 C',	8);
+
+DROP TABLE IF EXISTS `promotion_codes`;
+CREATE TABLE `promotion_codes` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `code` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `is_active` int NOT NULL,
+  `user_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `promotion_codes` (`id`, `code`, `is_active`, `user_id`) VALUES
+(1,	'5e7ee6afa6776',	0,	0),
+(2,	'5e7ee6afa6779',	0,	0),
+(3,	'5e7ee6afa677a',	0,	0),
+(4,	'5e7ee6afa677b',	0,	0),
+(5,	'5e7ee6afa677c',	0,	0),
+(6,	'5e7ee6afa677d',	0,	0),
+(7,	'5e7ee6afa677e',	0,	0),
+(8,	'5e7ee6afa677f',	0,	0),
+(9,	'5e7ee6afa6780',	0,	0),
+(10,	'5e7ee6afa6781',	0,	0),
+(11,	'5e7ee6afa6782',	0,	0),
+(12,	'5e7ee6afa6783',	0,	0),
+(13,	'5e7ee6afa6784',	0,	0),
+(14,	'5e7ee6afa6785',	0,	0),
+(15,	'5e7ee6afa6786',	0,	0),
+(16,	'5e7ee6afa6787',	0,	0),
+(17,	'5e7ee6afa6788',	0,	0),
+(18,	'5e7ee6afa6789',	0,	0),
+(19,	'5e7ee6afa678a',	0,	0),
+(20,	'5e7ee6afa678b',	0,	0),
+(21,	'5e7ee6afa678c',	0,	0),
+(22,	'5e7ee6afa678d',	0,	0),
+(23,	'5e7ee6afa678e',	0,	0),
+(24,	'5e7ee6afa678f',	0,	0),
+(25,	'5e7ee6afa6790',	0,	0),
+(26,	'5e7ee6afa6791',	0,	0),
+(27,	'5e7ee6afa6792',	0,	0),
+(28,	'5e7ee6afa6793',	0,	0),
+(29,	'5e7ee6afa6794',	0,	0),
+(30,	'5e7ee6afa6795',	0,	0),
+(31,	'5e7ee6afa6796',	0,	0),
+(32,	'5e7ee6afa6797',	0,	0),
+(33,	'5e7ee6afa6798',	0,	0),
+(34,	'5e7ee6afa6799',	0,	0),
+(35,	'5e7ee6afa679a',	0,	0),
+(36,	'5e7ee6afa679b',	0,	0),
+(37,	'5e7ee6afa679c',	0,	0),
+(38,	'5e7ee6afa679d',	0,	0),
+(39,	'5e7ee6afa679e',	0,	0),
+(40,	'5e7ee6afa679f',	0,	0),
+(41,	'5e7ee6afa67a0',	0,	0),
+(42,	'5e7ee6afa67a1',	0,	0),
+(43,	'5e7ee6afa67a2',	0,	0),
+(44,	'5e7ee6afa67a3',	0,	0),
+(45,	'5e7ee6afa67a4',	0,	0),
+(46,	'5e7ee6afa67a5',	0,	0),
+(47,	'5e7ee6afa67a6',	0,	0),
+(48,	'5e7ee6afa67a7',	0,	0),
+(49,	'5e7ee6afa67a8',	0,	0),
+(50,	'5e7ee6afa67a9',	0,	0),
+(51,	'5e7ee6afa67aa',	0,	0),
+(52,	'5e7ee6afa67ab',	0,	0),
+(53,	'5e7ee6afa67ac',	0,	0),
+(54,	'5e7ee6afa67ad',	0,	0),
+(55,	'5e7ee6afa67ae',	0,	0),
+(56,	'5e7ee6afa67af',	0,	0),
+(57,	'5e7ee6afa67b0',	0,	0),
+(58,	'5e7ee6afa67b1',	0,	0),
+(59,	'5e7ee6afa67b2',	0,	0),
+(60,	'5e7ee6afa67b3',	0,	0),
+(61,	'5e7ee6afa67b4',	0,	0),
+(62,	'5e7ee6afa67b5',	0,	0),
+(63,	'5e7ee6afa67b6',	0,	0),
+(64,	'5e7ee6afa67b7',	0,	0),
+(65,	'5e7ee6afa67b8',	0,	0),
+(66,	'5e7ee6afa67b9',	0,	0),
+(67,	'5e7ee6afa67ba',	0,	0),
+(68,	'5e7ee6afa67bb',	0,	0),
+(69,	'5e7ee6afa67bc',	0,	0),
+(70,	'5e7ee6afa67bd',	0,	0),
+(71,	'5e7ee6afa67be',	0,	0),
+(72,	'5e7ee6afa67bf',	0,	0),
+(73,	'5e7ee6afa67c0',	0,	0),
+(74,	'5e7ee6afa67c1',	0,	0),
+(75,	'5e7ee6afa67c2',	0,	0),
+(76,	'5e7ee6afa67c3',	0,	0),
+(77,	'5e7ee6afa67c4',	0,	0),
+(78,	'5e7ee6afa67c5',	0,	0),
+(79,	'5e7ee6afa67c6',	0,	0),
+(80,	'5e7ee6afa67c7',	0,	0),
+(81,	'5e7ee6afa67c8',	0,	0),
+(82,	'5e7ee6afa67c9',	0,	0),
+(83,	'5e7ee6afa67ca',	0,	0),
+(84,	'5e7ee6afa67cb',	0,	0),
+(85,	'5e7ee6afa67cc',	0,	0),
+(86,	'5e7ee6afa67cd',	0,	0),
+(87,	'5e7ee6afa67ce',	0,	0),
+(88,	'5e7ee6afa67cf',	0,	0),
+(89,	'5e7ee6afa67d0',	0,	0),
+(90,	'5e7ee6afa67d1',	0,	0),
+(91,	'5e7ee6afa67d2',	0,	0),
+(92,	'5e7ee6afa67d3',	0,	0),
+(93,	'5e7ee6afa67d4',	0,	0),
+(94,	'5e7ee6afa67d5',	0,	0),
+(95,	'5e7ee6afa67d6',	0,	0),
+(96,	'5e7ee6afa67d7',	0,	0),
+(97,	'5e7ee6afa67d8',	0,	0),
+(98,	'5e7ee6afa67d9',	0,	0),
+(99,	'5e7ee6afa67da',	0,	0),
+(100,	'5e7ee6afa67db',	0,	0);
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `city_id` int NOT NULL,
+  `language` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `opr_system` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `premium_user` tinyint NOT NULL,
+  `auth_token` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `inserted_date` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `last_login` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+-- 2020-03-28 10:40:30

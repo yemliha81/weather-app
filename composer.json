@@ -1,0 +1,8 @@
+{
+    "name": "phalcon/app",
+    "description": "Test description",
+    "require": {},
+    "require-dev": {
+        "phalcon/devtools": "^4.0"
+    }
+}
