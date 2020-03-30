@@ -3,7 +3,7 @@ Weather Application
 How to install?
 
 1. After cloning the repository into a folder, you can run these commands to start the application
-- cd/<folder>
+- cd/{folder}
 - docker-compose up 
 
 2. It will create 3 containers
